@@ -2,7 +2,7 @@
 #Technical Blog
 
 #### Week 1, Phase 0 at DBC
-#### What I Have Learned in Week-1 at Dev Bootcamp!
+#### What I Have Learned in Week-1 at Dev Bootcamp:
 #### October 10, 2014
 
 Week 1 of Dev Bootcamp is almost complete! This week we covered CLI(command line interface), Git and Github, and social aspects of the development world.
