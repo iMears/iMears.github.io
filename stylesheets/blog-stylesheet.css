@@ -1,0 +1,135 @@
+
+body {
+  margin: 0;
+}
+
+html {
+  color: gray;
+  background-color: #ededed;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  color: white;
+  font-size: 40px;
+  background-color: #eb4e48;
+  padding: 20px 0;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nextButton {
+  position: relative;
+  float:right;
+  margin-top: 5px;
+  margin-right: 120px;
+  padding: 0;
+
+  padding-bottom: 0px ;
+
+}
+
+#backButton {
+  position: relative;
+  float:right;
+  margin-top: 5px;
+  margin-right: 10px;
+  padding: 0;
+  padding-bottom: 0px ;
+}
+
+#title {
+  padding-left: 40px;
+}
+
+h1{
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 16px;
+  padding: 0 0 15px 0;
+}
+
+h3 {
+  font-size: 14px;
+  padding: 40;
+}
+
+main {
+  background-color: white;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+main div {
+  text-align: left;
+  padding-left: 20%;
+  padding-right: 40%;
+  clear: both;
+}
+
+#text {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    line-height: 1.5em;
+}
+
+#share {
+  padding-right: 20px;
+}
+
+#postPic {
+  padding: 0px;
+  max-width: 100%;
+
+}
+
+#links {
+  line-height: 1em;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+#social {
+  padding: 14px;
+  padding-bottom: 0px ;
+}
+
+#cbutton {
+  height: 30px;
+  width: 170px;
+  background-color: #ededed;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 100px;
+  text-decoration: none;
+  color: gray;
+}
+
+textarea {
+  background-color: #fdfdfd;
+  height: 175px;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  font-size: 10px;
+  color: #b7b5bd;
+  background-color: #eb4e48;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 175px;
+}
+
+#copy {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
