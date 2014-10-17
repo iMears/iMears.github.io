@@ -24,8 +24,12 @@ header {
   text-decoration: none;
   font-size: 14px;
   color: white;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 34px 15px 23px 15px;
+}
+
+#nav:hover{
+  background-color: #dedede;
+  color: red;
 }
 
 #nextButton {
@@ -34,9 +38,7 @@ header {
   margin-top: 5px;
   margin-right: 120px;
   padding: 0;
-
   padding-bottom: 0px ;
-
 }
 
 #backButton {
@@ -49,17 +51,39 @@ header {
 }
 
 #title {
-  padding-left: 40px
+  padding-right: 35%;
+  position: absolute;
+  display: block;
+  margin-left: 35%;
 }
 
 #title2{
   text-align: center;
   color: gray;
-  font-size: 40px;
-  width: 85%;
-  margin-left: auto;
+  font-size: 48px;
+  margin-left: 8%;
   margin-right: auto;
   position: absolute;
+}
+
+#bannername{
+  width: 20%;
+  height: 20%;
+  top:15%;
+  left: 10%;
+}
+
+#title3{
+  text-align: center;
+  color: gray;
+  font-size: 40px;
+  margin-left: 8%;
+  margin-right: auto;
+  position: absolute;
+  font-size: 14px;
+  padding-top: 85px;
+  padding-left: 3px;
+
 }
 
 h1{
@@ -92,10 +116,18 @@ main div {
   clear: both;
 }
 
-hr {
-  width: 30%;
-  float: left;
-  display: inline-block;
+#line1 {
+  width: 100%;
+  left: 15.5%;
+  top: 27%;
+  position: absolute;
+}
+
+#line2 {
+  width: 100%;
+  left: 15.5%;
+  top: 30%;
+  position: absolute;
 }
 
 #banner {
@@ -126,7 +158,7 @@ hr {
 #postPic {
   padding: 0px;
   max-width: 100%;
-
+  bottom: 0px;
 }
 
 #links {
@@ -140,6 +172,10 @@ hr {
   padding-bottom: 0px ;
 }
 
+/*#read {
+  font-size: 12px;
+}*/
+
 #cbutton {
   height: 30px;
   width: 170px;
@@ -150,20 +186,64 @@ hr {
   margin-bottom: 100px;
   text-decoration: none;
   color: gray;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-top: 35px;
 }
 
+#cbutton:hover{
+  background-color: #dedede;
+  color: red;
+ }
+
 #rbutton {
+  height: 30px;
+  width: 170px;
+  background-color: #ededed;
+  font-size: 14px;
+  line-height: 30px;
+  text-decoration: none;
+  color: gray;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-left: 39%;
+  margin-bottom: 0.5%;
+  display: inline-block;
+  position: relative;
+  bottom: 97px;
+}
+
+#rbutton:hover{
+  background-color: #dedede;
+  color: red;
+}
+
+#backbutton {
   height: 30px;
   width: 170px;
   background-color: #ededed;
   text-align: center;
   font-size: 14px;
   line-height: 30px;
-  margin-bottom: 0;
   text-decoration: none;
   color: gray;
-  float: right;
-  display: ;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-left: 50%;
+  margin-right: 45%;
+  margin-top: 50px;
+}
+
+#backbutton:hover{
+  background-color: #dedede;
+  color: red;
+;
+}
+
+#const{
+  max-width: 400px;
+  margin-left: 34.5%;
+  padding: 50px;
 }
 
 textarea {
@@ -182,6 +262,9 @@ footer {
   margin-right: auto;
   padding-top: 175px;
   border-radius: 7px 7px 0 0;
+  position: absolute;
+  left: 7.5%;
+
 }
 
 #copy {
