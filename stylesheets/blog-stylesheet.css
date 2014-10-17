@@ -11,12 +11,21 @@ html {
 
 header {
   color: white;
-  font-size: 40px;
+  font-size: 25px;
   background-color: #eb4e48;
   padding: 20px 0;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 0 0 7px 7px;
+}
+
+#nav{
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  padding: 20px;
+  padding-bottom: 40px;
 }
 
 #nextButton {
@@ -40,7 +49,17 @@ header {
 }
 
 #title {
-  padding-left: 40px;
+  padding-left: 40px
+}
+
+#title2{
+  text-align: center;
+  color: gray;
+  font-size: 40px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
 }
 
 h1{
@@ -57,6 +76,7 @@ h3 {
   padding: 40;
 }
 
+
 main {
   background-color: white;
   width: 85%;
@@ -70,6 +90,27 @@ main div {
   padding-left: 20%;
   padding-right: 40%;
   clear: both;
+}
+
+hr {
+  width: 30%;
+  float: left;
+  display: inline-block;
+}
+
+#banner {
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+#main2 {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 #text {
@@ -111,6 +152,20 @@ main div {
   color: gray;
 }
 
+#rbutton {
+  height: 30px;
+  width: 170px;
+  background-color: #ededed;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 0;
+  text-decoration: none;
+  color: gray;
+  float: right;
+  display: ;
+}
+
 textarea {
   background-color: #fdfdfd;
   height: 175px;
@@ -126,6 +181,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   padding-top: 175px;
+  border-radius: 7px 7px 0 0;
 }
 
 #copy {
