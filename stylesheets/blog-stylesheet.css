@@ -29,7 +29,17 @@ header {
 
 #nav:hover{
   background-color: #dedede;
-  color: red;
+  color: #eb4e48;
+}
+
+#linktext{
+  text-decoration: none;
+  color: gray;
+}
+
+#linktext:hover{
+  text-decoration: none;
+  color: #eb4e48;
 }
 
 #nextButton {
@@ -88,6 +98,7 @@ header {
 
 h1{
   line-height: 1.1em;
+  text-decoration: none;
 }
 
 h2 {
@@ -99,7 +110,6 @@ h3 {
   font-size: 14px;
   padding: 40;
 }
-
 
 main {
   background-color: white;
@@ -138,17 +148,59 @@ main div {
 
 }
 
-#main2 {
-  width: 85%;
+#banner2 {
+  position: relative;
+  width: 40%;
   margin-right: auto;
   margin-left: auto;
 
 }
 
+#main2 {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white
+
+}
+
+#main3 {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+#main4 {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: inline-block;
+  left: 7.5%;
+  background-color: white;
+}
+
 #text {
-    padding-top: 40px;
+    padding-top: 70px;
     padding-bottom: 50px;
     line-height: 1.5em;
+}
+
+#text2{
+  width: 50%;
+  position: absolute;
+  margin-left: 45%;
+  margin-right: auto;
+  top: 12%;
+}
+
+#text2{
+  width: 50%;
+  position: absolute;
+  margin-left: 50%;
+  margin-right: auto;
+  top: 25%;
 }
 
 #share {
@@ -172,10 +224,6 @@ main div {
   padding-bottom: 0px ;
 }
 
-/*#read {
-  font-size: 12px;
-}*/
-
 #cbutton {
   height: 30px;
   width: 170px;
@@ -189,11 +237,12 @@ main div {
   border-radius: 7px;
   border: 1px solid gray;
   margin-top: 35px;
+  padding: 7px;
 }
 
 #cbutton:hover{
   background-color: #dedede;
-  color: red;
+  color: #eb4e48;
  }
 
 #rbutton {
@@ -207,16 +256,21 @@ main div {
   border-radius: 7px;
   border: 1px solid gray;
   margin-left: 39%;
-  margin-bottom: 0.5%;
+  margin-bottom: 1.4%;
   display: inline-block;
   position: relative;
-  bottom: 97px;
+  bottom: 133px;
 }
 
 #rbutton:hover{
   background-color: #dedede;
-  color: red;
+  color: #eb4e48;
 }
+
+#sendemail:hover{
+  background-color: #dedede;
+  color: #eb4e48;
+ }
 
 #backbutton {
   height: 30px;
@@ -236,8 +290,7 @@ main div {
 
 #backbutton:hover{
   background-color: #dedede;
-  color: red;
-;
+  color: #eb4e48;
 }
 
 #const{
@@ -250,6 +303,7 @@ textarea {
   background-color: #fdfdfd;
   height: 175px;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 footer {
@@ -260,15 +314,136 @@ footer {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 175px;
+  padding-top: 87px;
   border-radius: 7px 7px 0 0;
-  position: absolute;
-  left: 7.5%;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  vertical-align: bottom
+}
 
+#info {
+  width: 30%;
+  height: 50%;
+  position: relative;
+  color: #ededed;
+  font-size: 14px;
+  left: 20%;
+  bottom: 17%;
 }
 
 #copy {
   margin: 0;
-  padding: 10px;
+  padding: 8px;
   color: white;
 }
+
+#smallinput{
+  height: 45px;
+  width: 80%;
+  display: block;
+  margin: 15px;
+}
+
+#smallinput2{
+  width: 80%;
+  height: 200px;
+  display: block;
+  margin: 15px;
+}
+
+#gbutton {
+  height: 30px;
+  width: 81%;
+  background-color: #ededed;
+  font-size: 14px;
+  line-height: 30px;
+  text-decoration: none;
+  color: gray;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-left: 3%;
+  margin-bottom: 2.4%;
+  display: block;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+#gbutton:hover{
+  height: 30px;
+  width: 81.5%;
+  background-color: #dbdbdb;
+  font-size: 14px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #eb4e48;
+  border-radius: 7px;
+  border: 1px solid gray;
+  margin-left: 3%;
+  margin-bottom: 2.4%;
+  display: block;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+#tilepic {
+  height: 400px;
+  width: 300px;
+  display: inline-block;
+/*  margin-left:auto;
+  margin-right: auto;*/
+  padding: 0;
+  position: relative;
+  left: 2.5%;
+  right: 12.5%;
+  margin-top: 7.5%;
+  margin-right:3.5%;
+  padding: 20px;
+}
+
+#boxpic {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: gray; /* IE 6-9 */
+   max-width: 100%;
+   max-heitht: 100%;
+
+}
+
+#boxpic:hover {
+   -webkit-filter: none;
+   -moz-filter: none;
+   -ms-filter: none;
+   filter: none;
+}
+
+#nodecor{
+  text-decoration: none;
+  color: gray;
+}
+
+#nodecor:hover{
+  text-decoration: none;
+  color: #eb4e48;
+}
+
+#nodecor2{
+  text-decoration: none;
+  color: purple;
+}
+
+#nodecor2:hover{
+  text-decoration: none;
+  color: #eb4e48;
+}
+
+.spacer{
+  margin-top: 160px;
+}
+
