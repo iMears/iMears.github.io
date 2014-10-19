@@ -214,6 +214,13 @@ main div {
   bottom: 0px;
 }
 
+.picBorder {
+
+  display: block;
+  position: relative;
+  margin: 20px;
+}
+
 #links {
   line-height: 1em;
   padding-top: 30px;
@@ -448,3 +455,7 @@ footer {
   margin-top: 160px;
 }
 
+hr{
+  margin: 50px 0 50px 0;
+  width: 100%;
+}
