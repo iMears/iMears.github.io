@@ -184,9 +184,9 @@ main div {
 }
 
 #text {
-    padding-top: 70px;
-    padding-bottom: 50px;
-    line-height: 1.5em;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  line-height: 1.5em;
 }
 
 #text2{
