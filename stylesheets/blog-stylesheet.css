@@ -17,7 +17,7 @@ header {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0 0 7px 7px;
+  /*border-radius: 0 0 7px 7px;*/
 }
 
 #nav{
@@ -180,6 +180,7 @@ main div {
   display: inline-block;
   left: 7.5%;
   background-color: white;
+  botton
 }
 
 #text {
@@ -191,15 +192,15 @@ main div {
 #text2{
   width: 50%;
   position: absolute;
-  margin-left: 45%;
+  margin-left: 49%;
   margin-right: auto;
-  top: 12%;
+  top: 28%;
 }
 
-#text2{
+#text3{
   width: 50%;
   position: absolute;
-  margin-left: 50%;
+  margin-left: 52%;
   margin-right: auto;
   top: 25%;
 }
@@ -322,13 +323,18 @@ footer {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 87px;
-  border-radius: 7px 7px 0 0;
+  padding-top: 70px;
+  /*border-radius: 7px 7px 0 0;*/
   position: relative;
   left: 0;
   right: 0;
   bottom: 0;
   vertical-align: bottom
+}
+
+#aboutFooter {
+  bottom: 0px;
+  padding-top: 178px;
 }
 
 #info {
@@ -453,6 +459,10 @@ footer {
 
 .spacer{
   margin-top: 160px;
+}
+
+.textSpace{
+  margin: 40px;
 }
 
 hr{
