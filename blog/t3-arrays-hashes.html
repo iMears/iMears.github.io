@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400' rel='stylesheet' type='text/css'>
+        <title>
+            Blog
+        </title>
+    </head>
+
+
+    <body>
+        <header>
+            <nav>
+              <a id="nav" href="../index.html">Home</a>
+              <a id="nav" href="../about.html">About</a>
+              <a id="nav" href="../projects.html">Projects</a>
+              <a id="nav" href="../blog_index.html">Blog</a>
+              <a id="nav" href="../contact.html">Contact</a>
+              <a id="icon" href="http://twitter.com/maxwell_mears"><img src="../imgs/icons/twitter.png"/></a>
+              <a id="icon" href="http://linkedin.com/in/maxwellmears"><img src="../imgs/icons/linkedin.png"></a>
+            </nav>
+        </header>
+        <div id="nextButton">
+            <a href="../under_construction.html"><img src="../imgs/arrow_right.png"></a>
+        </div>
+        <div id="backButton">
+            <a href="../under_construction.html"><img src="../imgs/arrow_left.png"></a>
+        </div>
+        <main>
+            <div id="text">
+                <h1>Arrays vs Hashes?</h1>
+                <h2>Posted on October 21, 2014</h2>
+
+            </div>
+
+            <div id="postPic" >
+                <div class="picBorder">
+                    <h2>What is an Array?</h2>
+                    <h3>An array is an ordered integer-indexed collection of objects. That's a fancy way of saying that we can take objects and put them together in order, and keep their position in the same order, and we can refer to those objects by their positions. That's what that integer-indexed part is. We can say give me the first object, give me the fifth object, and so on, because they are going to be indexed according to what position they hold. One thing to remember is that arrays starting index is always 0.</h3>
+                    <p>Example:</p>
+                    <pre>
+fruits = ["apple", "banana", "orange"] #make an array of fruits
+=> ["apple", "banana", "orange"]
+
+fruits[0] #returns value for index of 0
+=> "apple"
+
+fruits[2] #returns value for index of 2
+=> "orange"
+
+fruits[fruits.length - 2] #returns value for second to last index
+=> "banana"
+                    </pre>
+                    <hr>
+                    <h2>What is a Hash?</h2>
+                    <h3>
+                        Hashes are an unordered, object-indexed collection of objects. Instead of being indexed by their position and keeping track of the number, we keep track of them using an object. This is called a key-value pair. We have one object that's the 'key' and it references a second object which is the 'value'. The best example of a hash would be a dictionary because it's full of key-value pairs. In this case a key would be the 'word' and the value would be the 'definition' of that word.
+                    </h3>
+                    <p>Example:</p>
+                    <pre>
+dictionary = {
+              "car" => "has four wheels",
+              "motorcycle" => "has two wheels",
+              "boat" => "has zero wheels"
+            }
+
+dictionary["motorcycle"] #returns the value of this key
+=> "has two wheels"
+                    </pre>
+                    <hr>
+                    <h2>Arrays vs Hashes?</h2>
+                    <h3>So notice, first of all, that where an array is an ordered collection, a hash is an unordered collection. That's a very important difference. When we want to preserve the order and the order matters to us, we want to use an array. When it's not so much the order that matters, but we want the convenience of having that label, and we want to be able to refer to things by label instead, we use a hash.</h3>
+                    <img src="../imgs/array-vs-hash.png"/>
+
+                </div>
+            </div>
+            <div id="links">
+                <h2><a id="gbutton" href="http://www.ruby-doc.org/core-2.1.3/Array.html" id="nodecor">More info on Arrays</a></h2>
+                <h2><a id="gbutton" href="http://ruby-doc.org/core-2.1.3/Hash.html" id="nodecor">More info on Hashes</a></h2>
+            </div>
+
+            <div>
+                <p><span id="share">Share it:</span>
+                    <a href="http://github.com"><img id="social" src="../imgs/github.png"/></a>
+                    <a href="http://facebook.com"><img id="social" src="../imgs/facebook.png"/></a>
+                    <a href="http://twitter.com"><img id="social" src="../imgs/twitter.png"/></a>
+                </p>
+            </div>
+            <div id="cbox"></div>
+            <div>
+                <textarea></textarea>
+                <a href="../under_construction.html" id="cbutton">Post a comment</a>
+            </div>
+
+        </main>
+
+        <footer><p id="copy">&copy; All Rights Reserved</p></footer>
+    </body>
+</html>
