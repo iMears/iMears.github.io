@@ -65,8 +65,19 @@ three
                         <hr>
                         <p>If no block is given, an enumerator is returned instead.</p>
                         <pre>
->> array.cycle(2)
-=> #&lt;Enumerator: ["one", "two", "three"]:cycle(2)&gt;
+>> cycle_enumerator = array.cycle
+=> #&lt;Enumerator: ["one", "two", "three"]:cycle&gt;
+                        </pre>
+                        <p>At this point you can use Enumerator#next to get the next element of the cycle as many times as you want.</p>
+                        <pre>
+>> cycle_enumerator.next
+=> "one"
+>> cycle_enumerator.next
+=> "two"
+>> cycle_enumerator.next
+=> "three"
+>> cycle_enumerator.next
+=> "one"
                         </pre>
                     </h3>
                     <a href="../imgs/RubyEnumerableMindMap.png"><img id="imgFit" src="../imgs/RubyEnumerableMindMap.png"/></a>
