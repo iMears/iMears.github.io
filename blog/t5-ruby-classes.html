@@ -37,19 +37,28 @@
                     <h2>What is Lunar Slingshot?</h2>
                     <h3><p>Lunar Slingshot is a game I made using the Ruby Gosu gem. I started by using the example game that Gosu provides, then kept building off of that to make lunar slingshot. The game is heavily inspired by MITs "Space War!" which was the first computer game ever made. </p>
                     <img id="imgFitLunar" src="../imgs/lunar_slingshot.png"/>
-                    <p>I'm learning a lot from Lunar Slingshot. Specifically the concepts of classes and inheritance became much more clear after needing different objects to have similar but different functionality. I got help with the gravity algorithm among many other things, but the basic concept and design is my own.<p> This project has been the most rewarding, fun, and challenging learning experience in my journey to become a computer programmer to date. It's a work in progress, and there is a lot to add! Take a look at a stripped down version of the Player class below. Can you tell what it's doing?</p></h3><hr>
+                    <p>I'm learning a lot from Lunar Slingshot. Specifically the concepts of classes and inheritance became much more clear after needing different objects to have similar but different functionality. I got help with the gravity algorithm among many other things, but the basic concept and design is my own.<p> This project has been the most rewarding, fun, and challenging learning experience in my journey to become a computer programmer to date. It's a work in progress, and there is a lot to add! Take a look at the Player class below. Can you tell what it's doing?</p></h3><hr>
                     <pre id="lunar">
 class Player &lt FloatingObject
   attr_accessor :score, :bullets_remaining
-
   def initialize(window, player_number)
     super(window)
     @player_number = player_number
+    if @player_number == 1
+      @image = Gosu::Image.new(window, "media/Starfighter.png", false)
+    else
+      @image = Gosu::Image.new(window, "media/Starfighter2.png", false)
+    end
     reset_velocity
+    @image_jet = Gosu::Image.new(window, "media/Starfighter_jet.png", false)
+    @image_jet_p2 = Gosu::Image.new(window, "media/Starfighter_jet_2.png", false)
+    @beep = Gosu::Sample.new(window, "media/Beep.wav")
     @score = 0
     @bullet_sound = Gosu::Sample.new(window, "media/Fire_sound.wav")
+    @radius= 8
     @fire_armed = true
     @bullets_remaining = 4
+    @store_window = window
   end
 
   def turn_left(do_it)
@@ -67,6 +76,10 @@ class Player &lt FloatingObject
   def accelerate
     @vel_x += Gosu::offset_x(@angle, 0.009)
     @vel_y += Gosu::offset_y(@angle, 0.009)
+  end
+
+  def clear_score
+    @score = 0
   end
 
   def reset_velocity
@@ -96,7 +109,19 @@ class Player &lt FloatingObject
       nil
     end
   end
+
+  def die
+    @vel_x = @vel_y = 0
+    @bullets_remaining = 4
+  end
+
+  def add_bullet
+    if @bullets_remaining &lt 5
+      @bullets_remaining += 1
+    end
+  end
 end
+
                     </pre>
                     <hr>
                     <h2>What is a Class?</h2>
