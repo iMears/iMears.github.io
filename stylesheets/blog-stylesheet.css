@@ -190,13 +190,14 @@ pre{
   padding: 10px;
   border-radius: 7px;
   margin: 40px 0;
-  width: 115%;
+  width: 130%;
 }
 #imgFit{
   max-width: 100%;
 }
 
 #imgFitLunar{
+  max-width: 100%;
   margin: 20px 0;
 }
 /*****************************************************************/
