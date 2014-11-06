@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400' rel='stylesheet' type='text/css'>
+        <title>
+            Blog
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+              <a id="nav" href="../index.html">Home</a>
+              <a id="nav" href="../about.html">About</a>
+              <a id="nav" href="../projects.html">Projects</a>
+              <a id="nav" href="../blog_index.html">Blog</a>
+              <a id="nav" href="../contact.html">Contact</a>
+              <a id="icon" href="http://twitter.com/maxwell_mears"><img src="../imgs/icons/twitter.png"/></a>
+              <a id="icon" href="http://linkedin.com/in/maxwellmears"><img src="../imgs/icons/linkedin.png"></a>
+            </nav>
+        </header>
+        <div id="nextButton">
+            <a href="./c4-tech-issues.html"><img src="../imgs/arrow_right.png"></a>
+        </div>
+        <div id="backButton">
+            <a href="./c1-chefs-kitchen.html"><img src="../imgs/arrow_left.png"></a>
+        </div>
+        <main>
+            <div id="text">
+                <h1>Classes In Lunar Slingshot</h1>
+                <h2>Posted on November 5, 2014</h2>
+            </div>
+            <div id="postPic" >
+                <div class="picBorder">
+                    <h2>What is Lunar Slingshot?</h2>
+                    <h3><p>Lunar Slingshot is a game I made using the Ruby Gosu gem. I started by using the example game that Gosu provides, then kept building off of that to make lunar slingshot. The game is heavily inspired by MITs "Space War!" which was the first computer game ever made. </p>
+                    <img id="imgFitLunar" src="../imgs/lunar_slingshot.png"/>
+                    <p>I'm learning a lot from Lunar Slingshot. Specifically the concepts of classes and inheritance became much more clear after needing different objects to have similar but different functionality. I got help with the gravity algorithm among many other things, but the basic concept and design is my own.<p> This project has been the most rewarding, fun, and challenging learning experience in my journey to become a computer programmer to date. It's a work in progress, and there is a lot to add! Take a look at a stripped down version of the Player class below. Can you tell what it's doing?</p></h3><hr>
+                    <pre id="lunar">
+class Player &lt FloatingObject
+  attr_accessor :score, :bullets_remaining
+
+  def initialize(window, player_number)
+    super(window)
+    @player_number = player_number
+    reset_velocity
+    @score = 0
+    @bullet_sound = Gosu::Sample.new(window, "media/Fire_sound.wav")
+    @fire_armed = true
+    @bullets_remaining = 4
+  end
+
+  def turn_left(do_it)
+    if do_it
+      @angle -= 2.5
+    end
+  end
+
+  def turn_right(do_it)
+    if do_it
+      @angle += 2.5
+    end
+  end
+
+  def accelerate
+    @vel_x += Gosu::offset_x(@angle, 0.009)
+    @vel_y += Gosu::offset_y(@angle, 0.009)
+  end
+
+  def reset_velocity
+    @vel_x = @vel_y = 0.0
+    if @player_number != 1
+      @angle = 180
+    else
+      @angle = 0.0
+    end
+  end
+
+  def fire
+    # bullet fade out control
+    if @bullets_remaining >= 1
+      @bullets_remaining -= 1
+      @bullet_sound.play
+      my_bullet = Bullet.new(@store_window, @player_number)
+      x_offset = Gosu::offset_x(@angle, 16)
+      y_offset = Gosu::offset_y(@angle, 16)
+      x_vel_offset = Gosu::offset_x(@angle, 1)
+      y_vel_offset = Gosu::offset_y(@angle, 1)
+      my_bullet.warp(self.x + x_offset, self.y + y_offset)
+      my_bullet.warp_vel(self.vel_x + x_vel_offset, self.vel_y + y_vel_offset)
+      my_bullet.warp_angle(@angle)
+      my_bullet
+    else
+      nil
+    end
+  end
+end
+                    </pre>
+                    <hr>
+                    <h2>What is a Class?</h2>
+                    <h3><p>A class in ruby is a collection of data and methods. Classes wrap up all the things that an object can do, and the data that is specific to itself. Every object is an instance of a given class. When we create a new object it has access to all of the data stored in the instance variables, and also has access to all of the methods in that class. If we inherit from another class, we also gain access to all those instance variables and methods too.</p></h3>
+                    <hr>
+                    <h2>What Are Instance Variables?</h2>
+                    <h3><p>They are the data that is specific to a particular object. We can tell it's an instance variable by the '@' sign in front of the variable name. In Lunar Slingshot instance variables let you store data like the @position, @score, @velocity, etc. Instance variables let us store the difference between the two players. Both players are instantiated from the same class, but the instances have different data in their instance variables.</p><p>You may have noticed that we call #turn_right which changes the @angle instance variable, but where does that variable come from? The FloatingObject class that the Player class inherits from. Remember when we inherit from a class we now have access to all the instance variables and methods in that class.</p></h3>
+                    <hr>
+                    <h2>What Are Instance Methods?</h2>
+                    <h3>They define how to manipulate the instance variables. For example when we call a method like #fire on a Player object it subtracts one from that players instance variable @bullets_remaining. If we call #accelerate we change the value of @velocity. Instance methods can simply be described as what the instance objects can do.</h3><hr>
+                </div>
+            </div>
+            <div id="links">
+                <h2><a id="gbutton" href="https://github.com/iMears/lunar_slingshot/blob/master/pkg/lunar_slingshot_1_0_OSX.dmg?raw=true" id="nodecor">Download Lunar Slingshot for Mac</a>
+                    <a id="gbutton" href="https://github.com/iMears/lunar_slingshot" id="nodecor">Lunar Slingshot on Github</a>
+                </h2>
+            </div>
+            <div>
+            <p><span id="share">Share it:</span>
+                <a href="http://github.com"><img id="social" src="../imgs/github.png"/></a>
+                <a href="http://facebook.com"><img id="social" src="../imgs/facebook.png"/></a>
+                <a href="http://twitter.com"><img id="social" src="../imgs/twitter.png"/></a>
+            </p>
+            </div>
+            <div>
+                <textarea></textarea>
+                <a href="../under_construction.html" id="cbutton">Post a comment</a>
+            </div>
+        </main>
+        <footer><p id="copy">&copy; All Rights Reserved</p></footer>
+    </body>
+</html>

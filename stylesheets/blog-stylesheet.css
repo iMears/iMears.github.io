@@ -182,11 +182,22 @@ pre{
   padding: 10px;
   border-radius: 7px;
   margin: 40px 0;
-
 }
 
+#lunar{
+  background-color: #ededed;
+  white-space: pre-wrap;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 40px 0;
+  width: 115%;
+}
 #imgFit{
   max-width: 100%;
+}
+
+#imgFitLunar{
+  margin: 20px 0;
 }
 /*****************************************************************/
 /************************* CONTACT *************************/
