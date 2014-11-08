@@ -25,7 +25,7 @@
             <a href="./c4-tech-issues.html"><img src="../imgs/arrow_right.png"></a>
         </div>
         <div id="backButton">
-            <a href="./c1-chefs-kitchen.html"><img src="../imgs/arrow_left.png"></a>
+            <a href="./c5-feedback.html"><img src="../imgs/arrow_left.png"></a>
         </div>
         <main>
             <div id="text">
@@ -39,88 +39,89 @@
                     <img id="imgFitLunar" src="../imgs/lunar_slingshot.png"/>
                     <p>I'm learning a lot from Lunar Slingshot. Specifically the concepts of classes and inheritance became much more clear after needing different objects to have similar but different functionality. I got help with the gravity algorithm among many other things, but the basic concept and design is my own.<p> This project has been the most rewarding, fun, and challenging learning experience in my journey to become a computer programmer to date. It's a work in progress, and there is a lot to add! Take a look at the Player class below. Can you tell what it's doing?</p></h3><hr>
                     <pre id="lunar">
-class Player &lt FloatingObject
-  attr_accessor :score, :bullets_remaining
-  def initialize(window, player_number)
-    super(window)
+<div style="overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">class</span> <span style="color: #2b91af">Player</span> &lt; FloatingObject
+  <span style="color: #0000ff">attr_accessor</span> <span style="color: #a31515">:score</span>, <span style="color: #a31515">:bullets_remaining</span>
+  <span style="color: #0000ff">def</span> initialize(window, player_number)
+    <span style="color: #0000ff">super</span>(window)
     @player_number = player_number
-    if @player_number == 1
-      @image = Gosu::Image.new(window, "media/Starfighter.png", false)
-    else
-      @image = Gosu::Image.new(window, "media/Starfighter2.png", false)
-    end
+    <span style="color: #0000ff">if</span> @player_number == 1
+      @image = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:Image</span>.new(window, <span style="color: #a31515">&quot;media/Starfighter.png&quot;</span>, <span style="color: #0000ff">false</span>)
+    <span style="color: #0000ff">else</span>
+      @image = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:Image</span>.new(window, <span style="color: #a31515">&quot;media/Starfighter2.png&quot;</span>, <span style="color: #0000ff">false</span>)
+    <span style="color: #0000ff">end</span>
     reset_velocity
-    @image_jet = Gosu::Image.new(window, "media/Starfighter_jet.png", false)
-    @image_jet_p2 = Gosu::Image.new(window, "media/Starfighter_jet_2.png", false)
-    @beep = Gosu::Sample.new(window, "media/Beep.wav")
+    @image_jet = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:Image</span>.new(window, <span style="color: #a31515">&quot;media/Starfighter_jet.png&quot;</span>, <span style="color: #0000ff">false</span>)
+    @image_jet_p2 = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:Image</span>.new(window, <span style="color: #a31515">&quot;media/Starfighter_jet_2.png&quot;</span>, <span style="color: #0000ff">false</span>)
+    @beep = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:Sample</span>.new(window, <span style="color: #a31515">&quot;media/Beep.wav&quot;</span>)
     @score = 0
-    @bullet_sound = Gosu::Sample.new(window, "media/Fire_sound.wav")
+    @bullet_sound = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:Sample</span>.new(window, <span style="color: #a31515">&quot;media/Fire_sound.wav&quot;</span>)
     @radius= 8
-    @fire_armed = true
+    @fire_armed = <span style="color: #0000ff">true</span>
     @bullets_remaining = 4
     @store_window = window
-  end
+  <span style="color: #0000ff">end</span>
 
-  def turn_left(do_it)
-    if do_it
+  <span style="color: #0000ff">def</span> turn_left(do_it)
+    <span style="color: #0000ff">if</span> do_it
       @angle -= 2.5
-    end
-  end
+    <span style="color: #0000ff">end</span>
+  <span style="color: #0000ff">end</span>
 
-  def turn_right(do_it)
-    if do_it
+  <span style="color: #0000ff">def</span> turn_right(do_it)
+    <span style="color: #0000ff">if</span> do_it
       @angle += 2.5
-    end
-  end
+    <span style="color: #0000ff">end</span>
+  <span style="color: #0000ff">end</span>
 
-  def accelerate
-    @vel_x += Gosu::offset_x(@angle, 0.009)
-    @vel_y += Gosu::offset_y(@angle, 0.009)
-  end
+  <span style="color: #0000ff">def</span> accelerate
+    @vel_x += <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:offset_x</span>(@angle, 0.009)
+    @vel_y += <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:offset_y</span>(@angle, 0.009)
+  <span style="color: #0000ff">end</span>
 
-  def clear_score
+  <span style="color: #0000ff">def</span> clear_score
     @score = 0
-  end
+  <span style="color: #0000ff">end</span>
 
-  def reset_velocity
+  <span style="color: #0000ff">def</span> reset_velocity
     @vel_x = @vel_y = 0.0
-    if @player_number != 1
+    <span style="color: #0000ff">if</span> @player_number != 1
       @angle = 180
-    else
+    <span style="color: #0000ff">else</span>
       @angle = 0.0
-    end
-  end
+    <span style="color: #0000ff">end</span>
+  <span style="color: #0000ff">end</span>
 
-  def fire
-    # bullet fade out control
-    if @bullets_remaining >= 1
+  <span style="color: #0000ff">def</span> fire
+    <span style="color: #008000"># bullet fade out control</span>
+    <span style="color: #0000ff">if</span> @bullets_remaining &gt;= 1
       @bullets_remaining -= 1
       @bullet_sound.play
       my_bullet = Bullet.new(@store_window, @player_number)
-      x_offset = Gosu::offset_x(@angle, 16)
-      y_offset = Gosu::offset_y(@angle, 16)
-      x_vel_offset = Gosu::offset_x(@angle, 1)
-      y_vel_offset = Gosu::offset_y(@angle, 1)
+      x_offset = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:offset_x</span>(@angle, 16)
+      y_offset = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:offset_y</span>(@angle, 16)
+      x_vel_offset = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:offset_x</span>(@angle, 1)
+      y_vel_offset = <span style="color: #a31515">Gosu</span>:<span style="color: #a31515">:offset_y</span>(@angle, 1)
       my_bullet.warp(self.x + x_offset, self.y + y_offset)
       my_bullet.warp_vel(self.vel_x + x_vel_offset, self.vel_y + y_vel_offset)
       my_bullet.warp_angle(@angle)
       my_bullet
-    else
-      nil
-    end
-  end
+    <span style="color: #0000ff">else</span>
+      <span style="color: #0000ff">nil</span>
+    <span style="color: #0000ff">end</span>
+  <span style="color: #0000ff">end</span>
 
-  def die
+  <span style="color: #0000ff">def</span> die
     @vel_x = @vel_y = 0
     @bullets_remaining = 4
-  end
+  <span style="color: #0000ff">end</span>
 
-  def add_bullet
-    if @bullets_remaining &lt 5
+  <span style="color: #0000ff">def</span> add_bullet
+    <span style="color: #0000ff">if</span> @bullets_remaining &lt; 5
       @bullets_remaining += 1
-    end
-  end
-end
+    <span style="color: #0000ff">end</span>
+  <span style="color: #0000ff">end</span>
+<span style="color: #0000ff">end</span>
+</pre></div>
 
                     </pre>
                     <hr>
