@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400' rel='stylesheet' type='text/css'>
+        <title>
+            Blog
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+              <a id="nav" href="../index.html">Home</a>
+              <a id="nav" href="../about.html">About</a>
+              <a id="nav" href="../projects.html">Projects</a>
+              <a id="nav" href="../blog_index.html">Blog</a>
+              <a id="nav" href="../contact.html">Contact</a>
+              <a id="icon" href="http://twitter.com/maxwell_mears"><img src="../imgs/icons/twitter.png"/></a>
+              <a id="icon" href="http://linkedin.com/in/maxwellmears"><img src="../imgs/icons/linkedin.png"></a>
+            </nav>
+        </header>
+        <div id="nextButton">
+            <a href="./c5-feedback.html"><img src="../imgs/arrow_right.png"></a>
+        </div>
+        <div id="backButton">
+            <a href="./c6-stereotype-threat.html"><img src="../imgs/arrow_left.png"></a>
+        </div>
+        <main>
+            <div id="text">
+                <h1>Blocks, Procs, and Lambdas</h1>
+                <h2>Posted on November 11, 2014</h2>
+            </div>
+            <div id="postPic" >
+                <div class="picBorder">
+                    <img id="imgFit" src="../imgs/yield.png"/>
+                    <h2>What Is A Block?</h2>
+                    <h3><p>A code block in Ruby is chunk of code that is wrapped between the 'do' and 'end' keywords. They allow us to group statements and associate them with method calls almost like parameters. One of the most common uses of blocks in Ruby would be Array enumeration. Any method that wants to take a block as a parameter can use the yield keyword to run the block at any time. If you provide a code block when you call a method, then inside the method, you can yield control to that code block - suspend execution of the method; execute the code in the block; and return control to the method body, right after the call to yield. For example:</p></h3>
+<div style="overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">def</span> example
+  <span style="color: #0000ff">yield</span>
+<span style="color: #0000ff">end</span>
+
+example {<span style="color: #a31515">&quot;Hello world&quot;</span>}
+=&gt; <span style="color: #a31515">&quot;Hello world&quot;</span>
+</pre></div>
+                    <hr>
+                    <h2>What Is A Proc?</h2>
+                    <h3>A Proc is a kind of block. When we create a block with Proc.new, it behaves like it's a part of the calling method when return is used within it, and returns from both the block itself as well as the calling method. For example:</h3>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">def</span> example
+  Proc.new {<span style="color: #0000ff">return</span> <span style="color: #a31515">&quot;Returned from the block&quot;</span>}.call
+  <span style="color: #0000ff">return</span> <span style="color: #a31515">&quot;Returned from the method&quot;</span>
+<span style="color: #0000ff">end</span>
+
+example
+=&gt; <span style="color: #a31515">&quot;Returned from the block&quot;</span>
+</pre></div>
+                    <hr>
+                    <h2>What Is A Lambda?</h2>
+                    <h3>A Lambda is another type of block. When we create a block with a lambda, it behaves like a method when you use return and simply exits the block, handing control back to the calling method. Notice that it doesn't return all the way from the calling method. This is the fundamental difference between lambdas and procs, and for this reason lambdas are used more often. For example:</h3>
+                    <div style="overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">def</span> example
+  lambda {<span style="color: #0000ff">return</span> <span style="color: #a31515">&quot;Returned from the block&quot;</span>}
+  <span style="color: #0000ff">return</span> <span style="color: #a31515">&quot;Returned from the method&quot;</span>
+<span style="color: #0000ff">end</span>
+
+example
+=&gt; <span style="color: #a31515">&quot;Returned from the method&quot;</span>
+</pre></div>
+
+                    <hr>
+                </div>
+            </div>
+            <div id="links">
+                <h2><a href="http://godspeedyoo.github.io/blog/t6-oop-concepts.html" id="gbutton">More About Blocks, Procs, and Lambdas</a></h2>
+            </div>
+            <div>
+            <p><span id="share">Share it:</span>
+                <a href="http://github.com"><img id="social" src="../imgs/github.png"/></a>
+                <a href="http://facebook.com"><img id="social" src="../imgs/facebook.png"/></a>
+                <a href="http://twitter.com"><img id="social" src="../imgs/twitter.png"/></a>
+            </p>
+            </div>
+            <div>
+                <textarea></textarea>
+                <a href="../under_construction.html" id="cbutton">Post a comment</a>
+            </div>
+        </main>
+        <footer><p id="copy">&copy; All Rights Reserved</p></footer>
+    </body>
+</html>
