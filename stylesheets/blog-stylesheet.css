@@ -108,10 +108,11 @@ footer {
 
 #main4 {
   width: 85%;
-  margin-left: auto;*/
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   display: block;
-  left: 7.5%;
+
   background-color: white;
 }
 
