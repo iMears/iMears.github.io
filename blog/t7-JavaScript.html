@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400' rel='stylesheet' type='text/css'>
+        <title>
+            Blog
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+              <a id="nav" href="../index.html">Home</a>
+              <a id="nav" href="../about.html">About</a>
+              <a id="nav" href="../projects.html">Projects</a>
+              <a id="nav" href="../blog_index.html">Blog</a>
+              <a id="nav" href="../contact.html">Contact</a>
+              <a id="icon" href="http://twitter.com/maxwell_mears"><img src="../imgs/icons/twitter.png"/></a>
+              <a id="icon" href="http://linkedin.com/in/maxwellmears"><img src="../imgs/icons/linkedin.png"></a>
+            </nav>
+        </header>
+        <div id="nextButton">
+            <a href="../under_construction.html"><img src="../imgs/arrow_right.png"></a>
+        </div>
+        <div id="backButton">
+            <a href="../under_construction.html"><img src="../imgs/arrow_left.png"></a>
+        </div>
+        <main>
+            <div id="text">
+                <h1>Ruby classes vs. JavaScript constructor functions</h1>
+                <h2>Posted on November 21, 2014</h2>
+            </div>
+            <div id="postPic" >
+                <div class="picBorder"><img id="imgFit" src="../imgs/ruby.png"/><hr>
+                    <h2>Differences?</h2>
+                    <h3><p>The main difference between the two languages is that Ruby is class based, whereas JavaScript is not. However, it's possible to get class like behaviour in JS using constructor functions. If we want to create an object in Ruby, we say something like:</p></h3>
+                       <pre>
+def Person
+  def initialize(name)
+    @name = name
+  end
+
+  def talk
+    "My name is #{@name}"
+  end
+end
+
+max = Person.new('Maxwell Mears')
+
+max.talk # =>"My name is Maxwell Mears"
+                        </pre>
+                    <h2>Classes In Ruby</h2>
+                    <h3>In Ruby, every object has an associated class. Classes are a place to define methods, which give objects their behaviour. When we create an instance of an object, ruby protects that objects data.</h3>
+                    <h3><p>Each instance of the 'Person' class has access to all the methods defined in that class, as well as instance variables through method calls.</p></h3>
+                    <hr><h2>Constructor Functions In JavaScript</h2>
+                    <h3><p>Constructor functions provide a way to define behaviour which is shared by all new objects that are created by that function. We use a constuctor function with the 'Function.prototype' to share behavior between objects. This technique simulates the same behavior as Ruby classes. This looks something like:</p></h3>
+                    <pre>
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.talk = function() {
+  return "My name is" + this.name;
+}
+
+var john = new Person("John Smith");
+john.talk();   // prints "My name is John Smith"
+                    </pre>
+                    <h3>
+                        <p>In summary, properties on JavaScipt objects are publicly accessible. Ruby uses objects inherited from Class to create new objects, whereas JS can either define literal objects, or invoke constructor functions to create new objects. JavaScript also allows for the creation of new objects with shared behaviour via Function.prototype</p>
+                    </h3>
+                    <hr>
+                </div>
+            </div>
+            <div>
+            <p><span id="share">Share it:</span>
+                <a href="http://github.com"><img id="social" src="../imgs/github.png"/></a>
+                <a href="http://facebook.com"><img id="social" src="../imgs/facebook.png"/></a>
+                <a href="http://twitter.com"><img id="social" src="../imgs/twitter.png"/></a>
+            </p>
+            </div>
+            <div>
+                <textarea></textarea>
+                <a href="../under_construction.html" id="cbutton">Post a comment</a>
+            </div>
+        </main>
+        <footer><p id="copy">&copy; All Rights Reserved</p></footer>
+    </body>
+</html>
