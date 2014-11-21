@@ -1,0 +1,68 @@
+body{
+  background: #434343;
+  background-image: url("./space.jpeg");
+
+}
+
+p{
+  color: white;
+  max-width: 45%;
+  margin: 50px auto;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+#title{
+  font-size: 1.5em;
+}
+
+#map{
+  width: 640px;
+  height: 480px;
+  border: 2px solid white;
+  margin: 0 auto;
+  background: black;
+  position: relative;
+
+}
+
+#starfish{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 40px;
+  top: 200px;
+  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
+  transition: 0.4s;
+}
+
+#alien{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 560px;
+  top: 80px;
+  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
+  transition: 0.4s;
+}
+
+#alien2{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 560px;
+  top: 200px;
+  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
+  transition: 0.4s;
+}
+
+#alien3{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 560px;
+  top: 320px;
+  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
+  transition: 0.4s;
+}
