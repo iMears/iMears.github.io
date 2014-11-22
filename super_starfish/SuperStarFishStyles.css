@@ -37,32 +37,25 @@ p{
   transition: 0.4s;
 }
 
-#alien{
+.alien{
   width: 40px;
   height: 40px;
   position: absolute;
+  -webkit-transition: 0.4s, opacity 1s, transform 1s; /* For Safari 3.1 to 6.0 */
+  transition: 0.4s, opacity 1s, transform 1s;
+}
+
+#alien{
   left: 560px;
   top: 80px;
-  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
-  transition: 0.4s;
 }
 
 #alien2{
-  width: 40px;
-  height: 40px;
-  position: absolute;
   left: 560px;
   top: 200px;
-  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
-  transition: 0.4s;
 }
 
 #alien3{
-  width: 40px;
-  height: 40px;
-  position: absolute;
   left: 560px;
   top: 320px;
-  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
-  transition: 0.4s;
 }

@@ -82,6 +82,7 @@ var starfish = {
   y: 200,
   alive: true,
   won: false,
+  canMove: true,
 };
 
 var alien = {
@@ -102,7 +103,7 @@ var alien3 = {
   alive: true,
 };
 
-var alienCount = 3
+var alienCount = 3;
 
 var starfishImg = document.getElementById("starfish");
 var alienImg = document.getElementById("alien");
@@ -110,39 +111,45 @@ var alienImg2 = document.getElementById("alien2");
 var alienImg3 = document.getElementById("alien3");
 
 function move(direction){
-  ai_move(alien, alienImg);
-  ai_move(alien2, alienImg2);
-  ai_move(alien3, alienImg3);
-  if (direction.keyCode === 38){ // move up
-    if (starfish.y > 0){
-      starfish.y = (starfish.y - 40);
-      starfishImg.style.top = (starfish.y + "px");
-    }
-  }else if (direction.keyCode === 40){ // move down
-    if (starfish.y < 440){
-      starfish.y = (starfish.y + 40);
-      starfishImg.style.top = (starfish.y + "px");
-    }
-  }else if (direction.keyCode === 39){ // move right
-    if (starfish.x < 600){
-      starfish.x = (starfish.x + 40);
-      starfishImg.style.left = (starfish.x + "px");
-    }
+  if (starfish.canMove){
+    console.log('moving');
+    ai_move(alien, alienImg);
+    ai_move(alien2, alienImg2);
+    ai_move(alien3, alienImg3);
+    if (direction.keyCode === 38){ // move up
+      if (starfish.y > 0){
+        starfish.y = (starfish.y - 40);
+        starfishImg.style.top = (starfish.y + "px");
+      }
+    }else if (direction.keyCode === 40){ // move down
+      if (starfish.y < 440){
+        starfish.y = (starfish.y + 40);
+        starfishImg.style.top = (starfish.y + "px");
+      }
+    }else if (direction.keyCode === 39){ // move right
+      if (starfish.x < 600){
+        starfish.x = (starfish.x + 40);
+        starfishImg.style.left = (starfish.x + "px");
+      }
 
-  }else if (direction.keyCode === 37){ // move left
-    if (starfish.x > 0){
-      starfish.x = (starfish.x - 40);
-      starfishImg.style.left = (starfish.x + "px");
+    }else if (direction.keyCode === 37){ // move left
+      if (starfish.x > 0){
+        starfish.x = (starfish.x - 40);
+        starfishImg.style.left = (starfish.x + "px");
+      }
     }
+    status(alien, alienImg);
+    status(alien2, alienImg2);
+    status(alien3, alienImg3);
+    setTimeout(function(){
+      starfish.canMove = true;
+    }, 200)
+    starfish.canMove = false;
   }
-  status(alien, alienImg);
-  status(alien2, alienImg2);
-  status(alien3, alienImg3);
 }
 
 function ai_move(player, playerImg){
   var random = Math.floor((Math.random() * 4) + 1);
-  console.log("random is: " + random);
   // move up
   if (random === 1){
     if (player.y > 0){
@@ -174,12 +181,18 @@ function status(enemy, enemyImg){
   if (starfish.x === enemy.x && starfish.y === enemy.y && enemy.alive){
     alienCount -= 1;
     enemy.alive = false;
-    enemyImg.style.display = "none";
-    if (alienCount < 1){
-      alert("Congratulations you killed the whole evil Space-Squid-Squad. Now you're free to roam the galaxy in peace... YOU WIN!");
-    } else {
-      alert("You killed an evil Space-Squid!");
-    }
+    console.log ('DIE!');
+    setTimeout(function(){
+      console.log('killing alien');
+
+      enemyImg.style.opacity = "0";
+      enemyImg.style.transform = 'rotate(360deg) scale(5)';
+      if (alienCount < 1){
+        alert("Congratulations you killed the whole evil Space-Squid-Squad. Now you're free to roam the galaxy in peace... YOU WIN!");
+      } else {
+        alert("You killed an evil Space-Squid!");
+      }
+    }, 400);
   }
 }
 
