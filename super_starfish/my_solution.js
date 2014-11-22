@@ -121,23 +121,23 @@ function move(direction){
     ai_move(alien, alienImg);
     ai_move(alien2, alienImg2);
     ai_move(alien3, alienImg3);
-    if (direction.keyCode === 38 || direction === 38){ // move up
+    if (direction.keyCode === 38 || direction === 38 || direction.keyCode === 73){ // move up
       if (starfish.y > 0){
         starfish.y = (starfish.y - 40);
         starfishImg.style.top = (starfish.y + "px");
       }
-    }else if (direction.keyCode === 40 || direction === 40){ // move down
+    }else if (direction.keyCode === 40 || direction === 40 || direction.keyCode === 75){ // move down
       if (starfish.y < 440){
         starfish.y = (starfish.y + 40);
         starfishImg.style.top = (starfish.y + "px");
       }
-    }else if (direction.keyCode === 39 || direction == 39){ // move right
+    }else if (direction.keyCode === 39 || direction == 39 || direction.keyCode === 76){ // move right
       if (starfish.x < 600){
         starfish.x = (starfish.x + 40);
         starfishImg.style.left = (starfish.x + "px");
       }
 
-    }else if (direction.keyCode === 37 || direction == 37){ // move left
+    }else if (direction.keyCode === 37 || direction == 37 || direction.keyCode === 74){ // move left
       if (starfish.x > 0){
         starfish.x = (starfish.x - 40);
         starfishImg.style.left = (starfish.x + "px");
