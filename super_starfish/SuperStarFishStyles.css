@@ -7,7 +7,7 @@ body{
 p{
   color: white;
   max-width: 45%;
-  margin: 50px auto;
+  margin: 40px auto;
   font-family: 'Audiowide', cursive;
   text-align: center;
   line-height: 1.5em;
@@ -70,10 +70,8 @@ p{
 
 #controller{
   width: 640px;
-  height: 150px;
-  /*border: 2px solid white;*/
+  height: 105px;
   margin: 0 auto;
-  /*background: black;*/
   position: relative;
 }
 
@@ -83,9 +81,18 @@ p{
   top: 7%;
 }
 
-#twitter{
-  width: 50px;
-  left: 47%;
+
+#thanks{
   position: relative;
-  bottom: 40px;
+  width: 100%;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: red;
+}
+
+#twitter{
+  width: 30px;
+  left: 5px;
+  top: 5px;
+  position: relative;
 }
