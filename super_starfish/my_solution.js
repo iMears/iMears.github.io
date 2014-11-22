@@ -103,12 +103,17 @@ var alien3 = {
   alive: true,
 };
 
-var alienCount = 3;
+document.getElementById("up").onclick = function() {move(38);};
+document.getElementById("down").onclick = function() {move(40);};
+document.getElementById("right").onclick = function() {move(39);};
+document.getElementById("left").onclick = function() {move(37);};
 
 var starfishImg = document.getElementById("starfish");
 var alienImg = document.getElementById("alien");
 var alienImg2 = document.getElementById("alien2");
 var alienImg3 = document.getElementById("alien3");
+
+var alienCount = 3;
 
 function move(direction){
   if (starfish.canMove){
@@ -116,23 +121,23 @@ function move(direction){
     ai_move(alien, alienImg);
     ai_move(alien2, alienImg2);
     ai_move(alien3, alienImg3);
-    if (direction.keyCode === 38){ // move up
+    if (direction.keyCode === 38 || direction === 38){ // move up
       if (starfish.y > 0){
         starfish.y = (starfish.y - 40);
         starfishImg.style.top = (starfish.y + "px");
       }
-    }else if (direction.keyCode === 40){ // move down
+    }else if (direction.keyCode === 40 || direction === 40){ // move down
       if (starfish.y < 440){
         starfish.y = (starfish.y + 40);
         starfishImg.style.top = (starfish.y + "px");
       }
-    }else if (direction.keyCode === 39){ // move right
+    }else if (direction.keyCode === 39 || direction == 39){ // move right
       if (starfish.x < 600){
         starfish.x = (starfish.x + 40);
         starfishImg.style.left = (starfish.x + "px");
       }
 
-    }else if (direction.keyCode === 37){ // move left
+    }else if (direction.keyCode === 37 || direction == 37){ // move left
       if (starfish.x > 0){
         starfish.x = (starfish.x - 40);
         starfishImg.style.left = (starfish.x + "px");
@@ -188,7 +193,7 @@ function status(enemy, enemyImg){
       enemyImg.style.opacity = "0";
       enemyImg.style.transform = 'rotate(360deg) scale(5)';
       if (alienCount < 1){
-        alert("Congratulations you killed the whole evil Space-Squid-Squad. Now you're free to roam the galaxy in peace... YOU WIN!");
+        alert("Congratulations you killed the evil Space-Squid-Squad. Now you're free to roam the galaxy in peace... YOU WIN!");
       } else {
         alert("You killed an evil Space-Squid!");
       }

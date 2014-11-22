@@ -24,7 +24,6 @@ p{
   margin: 0 auto;
   background: black;
   position: relative;
-
 }
 
 #starfish{
@@ -59,3 +58,43 @@ p{
   left: 560px;
   top: 320px;
 }
+
+.button {
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  display: inline-block;
+  margin: 6%;
+  background: black;
+}
+
+#controller{
+  width: 640px;
+  height: 150px;
+  /*border: 2px solid white;*/
+  margin: 0 auto;
+  /*background: black;*/
+  position: relative;
+}
+
+.arrows{
+  position: relative;
+  left: 8%;
+  top: 7%;
+}
+
+/*#up{
+    background: purple;
+}
+
+#down{
+  background: green;
+}
+
+#left{
+  background: orange;
+}
+
+#right{
+  background: yellow;
+}*/
