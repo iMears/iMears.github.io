@@ -113,6 +113,8 @@ var alienImg = document.getElementById("alien");
 var alienImg2 = document.getElementById("alien2");
 var alienImg3 = document.getElementById("alien3");
 
+
+
 var alienCount = 3;
 
 function move(direction){
@@ -200,6 +202,8 @@ function status(enemy, enemyImg){
     }, 400);
   }
 }
+
+
 
 document.onkeydown = move;
 
