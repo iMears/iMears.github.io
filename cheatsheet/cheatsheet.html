@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enumerable</title>
+    <meta charset='UTF-8'>
+    <link type='text/css' rel='stylesheet' href='stylesheet.css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  </head>
+    <body>
+      <div id='header'>
+        <div id='nav'>
+          <ul>
+            <li><a href='http://ruby-doc.org/'>Home</a></li>
+            <li><a href='http://ruby-doc.org/core-2.1.5/'>Core 2.1.5</a></li>
+            <li><a href='http://ruby-doc.org/stdlib-2.1.5/'>STD-Lib 2.1.5</a></li>
+            <li><a href='http://ruby-doc.org/gems/'>Gems</a></li>
+            <li><a href='http://ruby-doc.org/downloads/'>Downloads</a></li>
+            <li><textarea id='search'>Search</textarea></li>
+          </ul>
+        </div>
+      </div>
+      <div id='header2'>There were 5 Ruby vulnerability reports in the last 14 days. 5 medium. Most recent: CVE-2014-8090.</div>
+      <div id='container'>
+        <div id='main'>
+          <div class='article'>
+            <h1>Enumerable:</h1>
+            <h3>
+              <p>The enumerable module provides collections (arrays, hashes, etc.) with the ability to search and sort.</p><p>The class the object comes from (array, hash) must have a #each method, which iterates through every members of the collection. The #each method iterates through the collection and doesn't return a value. Comparison enumerators (mix, max, sort) uses the comparison operator <=> to sort successive elements.</p>
+            </h3>
+            <pre>
+            </pre>
+          </div>
+          <div class='article'>
+            <h2>select / find_all</h2>
+            <h3>
+              Returns a subset of the collection based on criteria in the code block (boolean) that's given
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">[</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">5</span><span style="color: #f92672">].</span><span style="color: #f8f8f2">select</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">num</span><span style="color: #f92672">|</span>  <span style="color: #f8f8f2">num</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">odd?</span>  <span style="color: #f8f8f2">}</span>   <span style="color: #75715e">#=&gt; [1, 3, 5]</span>
+            </pre></div>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">find_all</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">i</span><span style="color: #f92672">|</span>  <span style="color: #f8f8f2">i</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">2</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span> <span style="color: #f8f8f2">}</span>   <span style="color: #75715e">#=&gt; [2, 4, 6, 8, 10]</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>find</h2>
+            <h3>
+              Returns the first occurence of the collection based on the criteria (similar to find_all)
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">find</span>    <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">i</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">5</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">7</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span> <span style="color: #f8f8f2">}</span>   <span style="color: #75715e">#=&gt; 35</span>
+            </pre></div>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">detect</span>   <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">i</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">5</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span> <span style="color: #f92672">and</span> <span style="color: #f8f8f2">i</span> <span style="color: #f92672">%</span> <span style="color: #ae81ff">7</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">0</span> <span style="color: #f8f8f2">}</span>   <span style="color: #75715e">#=&gt; nil</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>map/collect</h2>
+            <h3>
+              Transforms the collection based on the given code block and returns the results of operation
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">map</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">i</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">*</span><span style="color: #ae81ff">2</span> <span style="color: #f8f8f2">}</span>      <span style="color: #75715e">#=&gt; [1, 4, 6, 8]</span>
+            </pre></div>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">collect</span> <span style="color: #f8f8f2">{</span> <span style="color: #e6db74">&quot;dog&quot;</span>  <span style="color: #f8f8f2">}</span>   <span style="color: #75715e">#=&gt; [&quot;dog&quot;, &quot;dog&quot;, &quot;dog&quot;, &quot;dog&quot;]</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>reduce/inject</h2>
+            <h3>
+              Accumulates the result of an operation and saves it for the next iteration.
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e"># Sum some numbers</span>
+            </pre></div>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">5</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">reduce(</span><span style="color: #e6db74">:+</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">#=&gt; 45</span>
+            </pre></div>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #75715e"># Same using a block and inject</span>
+            </pre></div>
+            <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">5</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">inject</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">sum,</span> <span style="color: #f8f8f2">n</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">sum</span> <span style="color: #f92672">+</span> <span style="color: #f8f8f2">n</span> <span style="color: #f8f8f2">}</span> <span style="color: #75715e">#=&gt; 45</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>each_with_index</h2>
+            <h3>
+              Iterates through not the actual element, but the index position of the collection.
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">hash</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">Hash</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">new</span>
+            <span style="color: #e6db74">%w(cat dog wombat)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">each_with_index</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">item,</span> <span style="color: #f8f8f2">index</span><span style="color: #f92672">|</span>
+              <span style="color: #f8f8f2">hash</span><span style="color: #f92672">[</span><span style="color: #f8f8f2">item</span><span style="color: #f92672">]</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">index</span>
+            <span style="color: #f8f8f2">}</span>
+            <span style="color: #f8f8f2">hash</span>   <span style="color: #75715e">#=&gt; {&quot;cat&quot;=&gt;0, &quot;dog&quot;=&gt;1, &quot;wombat&quot;=&gt;2}</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>group_by</h2>
+            <h3>
+              Groups the collection by the results of the code block; returns a hash. The result of operation is the key and the elements that match the criteria as an array is the value.
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">group_by</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">i</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">i</span><span style="color: #f92672">%</span><span style="color: #ae81ff">3</span> <span style="color: #f8f8f2">}</span>   <span style="color: #75715e">#=&gt; {0=&gt;[3, 6], 1=&gt;[1, 4], 2=&gt;[2, 5]}</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>sort</h2>
+            <h3>
+              Sorts the collection by integer or alphabetical order. If used without a code block, it will default to its own comparison operator (<=>). Otherwise, you can pass a code block, which should return 0, -1, +1 based on the comparison of a and b.
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #e6db74">%w(bananas apples strawberries)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sort</span> <span style="color: #75715e">#=&gt; [&quot;apples&quot;, &quot;bananas&quot;, &quot;strawberries&quot;]</span>
+            <span style="color: #f92672">[</span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">4</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f92672">].</span><span style="color: #f8f8f2">sort</span> <span style="color: #75715e">#=&gt; [1, 2, 3, 4, 5]</span>
+            <span style="color: #f8f8f2">(</span><span style="color: #ae81ff">1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">.</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sort</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">a,</span> <span style="color: #f8f8f2">b</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">b</span> <span style="color: #f92672">&lt;=&gt;</span> <span style="color: #f8f8f2">a</span> <span style="color: #f8f8f2">}</span> <span style="color: #75715e">#=&gt; [5, 4, 3, 2, 1]</span>
+            </pre></div>
+          </div>
+          <div class='article'>
+            <h2>sort_by</h2>
+            <h3>
+              Sorts the collection by evaluating a code block and returns a sorted array.
+            </h3>
+            <div style="background: #272822; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #e6db74">%w{carrots kale celery}</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sort_by</span> <span style="color: #f8f8f2">{</span> <span style="color: #f92672">|</span><span style="color: #f8f8f2">word</span><span style="color: #f92672">|</span> <span style="color: #f8f8f2">word</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">length}</span><span style="color: #75715e">#=&gt; [&quot;kale&quot;, &quot;celery&quot;, &quot;carrots&quot;]</span>
+            </pre></div>
+          </div>
+        </div>
+        <div id='left'>
+          <div id='sidebar_header'><h1>Methods:</h1></div>
+          <div id='sidebar'>
+            <ul>
+              <li><a href=''>#select</a></li>
+              <li><a href=''>#find_all</a></li>
+              <li><a href=''>#find</a></li>
+              <li><a href=''>#map</a></li>
+              <li><a href=''>#collect</a></li>
+              <li><a href=''>#reduce</a></li>
+              <li><a href=''>#inject</a></li>
+              <li><a href=''>#each_with_index</a></li>
+              <li><a href=''>#group_by</a></li>
+              <li><a href=''>#sort</a></li>
+              <li><a href=''>#sort_by</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <div id='footer'></div>
+  </body>
+</html>
