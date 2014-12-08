@@ -21,17 +21,16 @@ header {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  /*border-radius: 0 0 7px 7px;*/
 }
 
-#nav{
+.nav{
   text-decoration: none;
   font-size: 14px;
   color: white;
   padding: 34px 15px 23px 15px;
 }
 
-#nav:hover{
+.nav:hover{
   background-color: #ededed;
   color: #eb4e48;
 }
@@ -46,7 +45,7 @@ header {
   color: #eb4e48;
 }
 
-#icon{
+.icon{
   position: relative;
   padding: 10px;
   float: right;
@@ -65,7 +64,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
   padding-top: 70px;
-  /*border-radius: 7px 7px 0 0;*/
   position: relative;
   left: 0;
   right: 0;
@@ -195,7 +193,7 @@ pre{
 
 /************************* CONTACT *************************/
 
-#smallinput{
+.smallinput{
   height: 45px;
   width: 80%;
   display: block;
@@ -231,12 +229,9 @@ pre{
 }
 
 #cbutton {
-  /* height: 30px; */
-  /* width: 170px; */
   background-color: #ededed;
   text-align: center;
   font-size: 14px;
-  /* line-height: 30px; */
   margin-bottom: 100px;
   text-decoration: none;
   color: gray;
@@ -244,7 +239,6 @@ pre{
   border: 1px solid gray;
   margin-top: 32px;
   padding: 7px;
-/*  left:50%;*/
   position: absolute;
 }
 
@@ -488,5 +482,3 @@ h3 {
   font-size: 14px;
   padding-left: 3px;
 }
-
-
