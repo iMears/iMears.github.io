@@ -1,9 +1,10 @@
 $(document).ready(function(){
     $('nav').mouseenter(function (){
-        $('nav').fadeTo('slow', 1);
+        $('nav').fadeTo('fast', 1);
     });
 
     $('nav').mouseleave(function (){
-        $('nav').fadeTo('slow', 0);
+        $('nav').fadeTo('fast', 0.8);
     });
 });
+
