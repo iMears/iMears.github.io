@@ -8,8 +8,8 @@ img: lunar.png
 thumbnail: lunar-thumbnail.png
 alt: image-alt
 project-date: December 2014
-client: Start Bootstrap
-category: Ruby Game
+code: https://github.com/iMears/lunar_slingshot
+link: http://youtu.be/4hUEbOHJpps
 description: A space game inspired by MIT's "Spacewar!". Built in Ruby using Gosu. During my internship with Native Cloud Systems, I learned about sprite style 2D games. I wanted to remake the very first computer game, Spacewar!,  and when I found the Ruby Gosu gem, I saw an opportunity to make that happen. This project helped me understand the basics of object oriented programming (while having a blast).
 
 

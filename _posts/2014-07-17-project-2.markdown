@@ -1,15 +1,15 @@
 ---
-title: Escape
-subtitle: Website Design
+title: Ruby Robot
+subtitle: DIY
 layout: default
 modal-id: 2
 date: 2014-07-17
-img: escape.png
-thumbnail: escape-thumbnail.png
+img: ruby-robot.png
+thumbnail: ruby-robot-thumbnail.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+project-date: December 2014
+code: https://github.com/iMears/ruby-robot
+link: http://youtu.be/hjyZFEwoLpo
+description: After being introduced to IOT devices, I fell in love with them.  I played with an Arduino for bit, then bought a Raspberry Pi. I also had a Parallax Boe-Bot which was fun to use, but limited. I came up with an idea to put all the pieces that I had been playing with together, making the Boe-Bot remote controlled through SSH. I did this by attaching a Raspberry Pi to the bottom of the Boe-Bot. I then connect the Pi to the Arduino, which controlled the Boe-Bot using a program that I wrote in Ruby.
 
 ---
