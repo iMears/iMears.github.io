@@ -1,0 +1,15 @@
+---
+title: Lunar Slingshot
+subtitle: Ruby Game
+layout: default
+modal-id: 1
+date: 2014-07-18
+img: lunar.png
+thumbnail: lunar-thumbnail.png
+alt: image-alt
+project-date: December 2014
+client: Start Bootstrap
+category: Ruby Game
+description: A space game inspired by MIT's "Spacewar!". Built in Ruby using Gosu.
+
+---
