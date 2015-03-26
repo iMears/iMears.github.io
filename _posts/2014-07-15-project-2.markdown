@@ -2,8 +2,8 @@
 title: Solution Share
 subtitle: An easy way to view fellow Dev Bootcamp classmates' solutions on Github.
 layout: default
-modal-id: 5
-date: 2014-07-14
+modal-id: 1
+date: 2014-07-15
 img: solution-share.png
 thumbnail: solution-share-thumbnail.png
 alt: image-alt

@@ -3,7 +3,7 @@ title: Ruby Robot
 subtitle: DIY
 layout: default
 modal-id: 2
-date: 2014-07-17
+date: 2014-07-16
 img: ruby-robot.png
 thumbnail: ruby-robot-thumbnail.png
 alt: image-alt

@@ -2,8 +2,8 @@
 title: Lunar Slingshot
 subtitle: Ruby Game
 layout: default
-modal-id: 1
-date: 2014-07-18
+modal-id: 4
+date: 2014-07-17
 img: lunar.png
 thumbnail: lunar-thumbnail.png
 alt: image-alt

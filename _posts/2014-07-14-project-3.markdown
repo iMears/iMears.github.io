@@ -2,8 +2,8 @@
 title: Bite Me
 subtitle: Voice-Controlled Kitchen Helper
 layout: default
-modal-id: 3
-date: 2014-07-16
+modal-id: 6
+date: 2014-07-14
 img: bite-me.png
 thumbnail: bite-me-thumbnail.png
 alt: image-alt
