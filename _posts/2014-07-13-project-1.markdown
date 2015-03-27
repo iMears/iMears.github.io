@@ -2,7 +2,7 @@
 title: Flash Genius
 subtitle: The adaptive flash-card app
 layout: default
-modal-id: 3
+modal-id: 6
 date: 2014-07-13
 img: flash-genius.png
 thumbnail: flash-genius-thumbnail.png
