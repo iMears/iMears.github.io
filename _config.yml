@@ -19,11 +19,11 @@ people:
   position: Full Stack Web Developer
   social:
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+      url: https://twitter.com/maxwell_mears
+    - title: linkedin
+      url: https://www.linkedin.com/in/maxwellmears
+    - title: github
+      url: http://github.com/imears
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
