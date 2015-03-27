@@ -1,10 +1,13 @@
-Maxwell Mears
-Full Stack Engineer
+
 ====================
 
-## Thanks for checking out my site!
+#Maxwell Mears
+##Full Stack Engineer
 
-Hosted on [iMears](http://imears.com)
+### Thanks for checking out iMears!
+
+
+This is my personal site, hosted at [iMears.com](http://imears.com)
 
 
 ###About Me
@@ -15,16 +18,16 @@ Watch me solve a [Rubik's Cube](https://youtu.be/-K8XaDLmUxU) in less then 50 se
 
 ###Projects:
 
-Lunar Slingshot: *[Code](https://github.com/iMears/lunar_slingshot) | *[Video](http://youtu.be/4hUEbOHJpps)
+Lunar Slingshot: [Code](https://github.com/iMears/lunar_slingshot) | [Video](http://youtu.be/4hUEbOHJpps)
 
-Ruby Robot: *[Code](https://github.com/iMears/ruby-robot) | *[Video](http://youtu.be/hjyZFEwoLpo)
+Ruby Robot: [Code](https://github.com/iMears/ruby-robot) | [Video](http://youtu.be/hjyZFEwoLpo)
 
-Bite Me: *[Code](https://github.com/iMears/bite-me) | *[Site](http://bite-me.herokuapp.com/) | *[Video](https://youtu.be/bGCexMQNw4I)
+Bite Me: [Code](https://github.com/iMears/bite-me) | [Site](http://bite-me.herokuapp.com/) | [Video](https://youtu.be/bGCexMQNw4I)
 
-Job Huntr: *[Code](https://github.com/iMears/job_huntr) | *[Site](http://jobhuntr.herokuapp.com/)
+Job Huntr: [Code](https://github.com/iMears/job_huntr) | [Site](http://jobhuntr.herokuapp.com/)
 
-Solution Share: *[Code](https://github.com/iMears/solution_share) | *[Site](https://solutionshare.herokuapp.com/)
+Solution Share: [Code](https://github.com/iMears/solution_share) | [Site](https://solutionshare.herokuapp.com/)
 
-Flash Genius: *[Code](https://github.com/cgardens/flash-genius) | *[Site](http://flashgenius.herokuapp.com/)
+Flash Genius: [Code](https://github.com/cgardens/flash-genius) | [Site](http://flashgenius.herokuapp.com/)
 
 =========
