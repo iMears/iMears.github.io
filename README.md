@@ -1,13 +1,9 @@
-
+Maxwell Mears
 ====================
-
-#Maxwell Mears
-##Full Stack Engineer
-
-### Thanks for checking out iMears!
+###Full Stack Engineer
 
 
-This is my personal site, hosted at [iMears.com](http://imears.com)
+This project is my personal site, hosted at [iMears.com](http://imears.com)
 
 
 ###About Me
