@@ -8,9 +8,7 @@ This project is my personal site, hosted at [iMears.com](http://imears.com)
 
 ###About Me
 
-I love working with awesome people to create beautiful things! As a passionate problem-solver, my love of puzzles (particularly Rubik's cubes), interest in programming, and aptitude for design are maximized through web development. I am enthusiastic and have a strong desire to continue advancing my skills.
-
-Watch me solve a [Rubik's Cube](https://youtu.be/-K8XaDLmUxU) in less then 50 seconds!
+I love working with awesome people to create beautiful and meaningful things! As a passionate problem-solver, my love of puzzles ([particularly Rubik's cubes](https://youtu.be/-K8XaDLmUxU)), interest in programming, and aptitude for design are maximized through web development. I am enthusiastic and have a strong desire to continue advancing my skills.
 
 ###Projects:
 
