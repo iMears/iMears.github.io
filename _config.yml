@@ -1,4 +1,6 @@
-url: https://derekdileo.github.io
+#url: https://derekdileo.github.io
+
+url: http://localhost
 baseurl:
 
 # Site settings
