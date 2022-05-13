@@ -25,7 +25,7 @@ people:
       - title: linkedin
         url: https://www.linkedin.com/in/derek-dileo
       - title: github
-        url: https://github.com/derekdileo
+        url: https://github.com/derekdotdev
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -34,7 +34,7 @@ social:
   - title: linkedin
     url: https://www.linkedin.com/in/derek-dileo
   - title: github
-    url: https://github.com/derekdileo
+    url: https://github.com/derekdotdev
 
 # Postal address (add as many lines as necessary)
 address:
