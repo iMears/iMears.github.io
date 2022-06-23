@@ -4,8 +4,8 @@ subtitle: A streamlined way to find nearby live entertainers and make song reque
 layout: default
 modal-id: 3
 date: 2022-04-22
-img: request-live.png
-thumbnail: request-live-thumbnail.png
+img: request-live-main.png
+thumbnail: request-live-main-thumbnail.png
 alt: image-alt
 project-date: April 2022
 code: https://github.com/derekdotdev/request-live-mobile
