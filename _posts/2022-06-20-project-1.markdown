@@ -1,5 +1,5 @@
 ---
-title: City of Orlando Youth Homelessness Project
+title: Youth Homelessness Project
 subtitle: Providing Essential Resources to Those in Need
 layout: default
 modal-id: 1
