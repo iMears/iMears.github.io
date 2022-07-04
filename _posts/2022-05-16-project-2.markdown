@@ -1,6 +1,6 @@
 ---
 title: Cat Tracker
-subtitle: DIY Ardiuno project to track the response time of my cat at mealtime.
+subtitle: DIY Arduino project to track the response time of my cat at mealtime.
 layout: default
 modal-id: 2
 date: 2022-05-16
